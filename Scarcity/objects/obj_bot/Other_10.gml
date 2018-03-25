@@ -16,21 +16,21 @@ if !is_wall_jmping
 if move != 0
 	is_walk = true;
 //Set Charging
-if key_run && energy_reserve >= run_energy
+if key_run && energy_reserve >= run_energy[global.boost_power]
 {
 	is_running = true;
 	is_acceling = true;
 	alarm[1] = run_time;
 	alarm[2] = accel_time;
-	energy_reserve -= run_energy;
+	energy_reserve -= run_energy[global.boost_power];
 }
 //Horizontal Movespeed
 if !is_running
 	hsp = move * h_spd;
 else if is_running && is_acceling
-	hsp = move * accel_spd;
+	hsp = move * accel_spd[global.boost_power];
 else if is_running && !is_acceling
-	hsp = move * run_spd;
+	hsp = move * run_spd[global.boost_power];
 
 //Apply Gravity
 if (vsp < 10)
@@ -49,9 +49,9 @@ if is_wall_jmping
 //If on the ground, allow jumping
 if (place_meeting(x, y + 1, obj_solid))
 {
-	if energy_reserve >= jmp_energy
+	if energy_reserve >= jmp_energy[global.leg_power]
 	{
-		vsp = key_jump * -jmp_spd
+		vsp = key_jump * -jmp_spd[global.leg_power];
 		if vsp < 0
 			is_jmp = true;
 	}
@@ -123,7 +123,7 @@ prev_vsp = vsp;
 
 if is_jmp
 {
-	energy_reserve -= jmp_energy;
+	energy_reserve -= jmp_energy[global.leg_power];
 	is_jmp = false;
 }
 if is_wall_jmp

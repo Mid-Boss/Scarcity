@@ -1,7 +1,7 @@
 if !instance_exists(target_) exit;
 
 x = lerp(x,target_.x,camera_speed_);
-y = lerp(y,target_.y-(height_/4),camera_speed_);
+y = lerp(y,target_.y-(height_/5),camera_speed_);
 x = round_n(x, 1/scale_);
 y = round_n(y, 1/scale_);
 x = clamp(x, width_/2, room_width - width_/2);

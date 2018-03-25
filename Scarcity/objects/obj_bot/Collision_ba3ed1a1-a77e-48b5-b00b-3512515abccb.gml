@@ -1,0 +1,1 @@
+obj_UI.text_ = other.text_;

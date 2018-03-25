@@ -16,6 +16,10 @@ global.one_second = game_get_speed(gamespeed_fps);
 
 global.gravity_acceleration = 0.25;
 global.gravity_max = 6;
+global.leg_power_found = false;
+global.leg_power = power_level.two;
+global.boost_power_found = false;
+global.boost_power = power_level.two;
 
 enum xdir {
 	right,
@@ -29,7 +33,11 @@ enum ydir {
 
 initialize_text_settings();
 
+audio_play_sound(snd_music_techno,1,true);
+
 //End of create, goto start room
+
+
 
 room_goto(rm_labs_start);
 
