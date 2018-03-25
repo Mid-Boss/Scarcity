@@ -17,9 +17,9 @@ global.one_second = game_get_speed(gamespeed_fps);
 global.gravity_acceleration = 0.25;
 global.gravity_max = 6;
 global.leg_power_found = false;
-global.leg_power = power_level.two;
+global.leg_power = power_level.one;
 global.boost_power_found = false;
-global.boost_power = power_level.two;
+global.boost_power = power_level.one;
 
 enum xdir {
 	right,

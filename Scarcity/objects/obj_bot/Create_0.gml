@@ -2,12 +2,12 @@
 // You can write your code in this editor
 
 h_spd = 4;
-run_spd = [6,8,10];
-accel_spd = [18,24,30];
+run_spd = [8,10];
+accel_spd = [24,30];
 x_disp = 0;
-jmp_spd = [8, 10, 12];
+jmp_spd = [10, 12];
 h_wall_spd = 2;
-v_wall_spd = 2;
+v_wall_spd = 3;
 grav = 0.4;
 v_slide = 0.3;
 hsp = 0;
@@ -25,8 +25,12 @@ is_running = false;
 run_time = 15;
 accel_time = 3;
 can_input = true;
+text_time = 200;
+run_charge = 0;
 
-run_energy = [5,10,15];
-jmp_energy = [5,10,15];
+run_energy = [5,10];
+jmp_energy = [5,10];
 wall_jmp_energy = 5;
 bullet_energy = 10;
+
+depth = -1000;

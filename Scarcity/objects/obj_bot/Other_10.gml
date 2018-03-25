@@ -6,9 +6,8 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
 key_run = keyboard_check_pressed(ord("A"));
 key_shoot = keyboard_check_pressed(ord("D"));
-key_charge = keyboard_check_pressed(vk_lshift);
-key_change_up = keyboard_check_pressed(vk_up);
-key_change_down = keyboard_check_pressed(vk_down);
+key_charge_jmp = keyboard_check_pressed(ord("Q"));
+key_charge_dash = keyboard_check_pressed(ord("E"));
 
 //Left and right inputs
 if !is_wall_jmping
@@ -16,21 +15,22 @@ if !is_wall_jmping
 if move != 0
 	is_walk = true;
 //Set Charging
-if key_run && energy_reserve >= run_energy[global.boost_power]
+if key_run && energy_reserve >= run_energy[global.boost_power] && !is_running && run_charge
 {
 	is_running = true;
 	is_acceling = true;
 	alarm[1] = run_time;
 	alarm[2] = accel_time;
 	energy_reserve -= run_energy[global.boost_power];
+	run_charge = 0;
 }
 //Horizontal Movespeed
 if !is_running
 	hsp = move * h_spd;
 else if is_running && is_acceling
-	hsp = move * accel_spd[global.boost_power];
+	hsp = image_xscale * accel_spd[global.boost_power];
 else if is_running && !is_acceling
-	hsp = move * run_spd[global.boost_power];
+	hsp = image_xscale * run_spd[global.boost_power];
 
 //Apply Gravity
 if (vsp < 10)
@@ -55,6 +55,7 @@ if (place_meeting(x, y + 1, obj_solid))
 		if vsp < 0
 			is_jmp = true;
 	}
+	run_charge = 1;
 }
 
 //If running into an object, do it smoothly
@@ -81,6 +82,8 @@ if (place_meeting(x+hsp, y, obj_solid))
 	else
 		hsp = 0;
 }
+
+
 
 //If falling to the ground, do it smoothly
 if (place_meeting(x, y + vsp, obj_solid))

@@ -3,7 +3,8 @@
 
 audio_play_sound(snd_robot_catapult_fire,7,false);
 global.leg_power_found = true;
-obj_UI.text_ = "Juice up that jump.";
+obj_UI.text_ = "Press Q to adjust jumping power level";
 obj_bot.can_input = true;
 obj_bot.image_speed = 1;
+obj_bot.alarm[3] = obj_bot.text_time
 instance_destroy();

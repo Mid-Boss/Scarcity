@@ -31,7 +31,7 @@ if is_landing
 	sprite_index = spr_bot_runner_land;
 }
 
-if (sprite_index == spr_bot_runner_land and image_index == 5) or vsp < 0
+if (sprite_index == spr_bot_runner_land and image_index == 6) or vsp < 0
 {
 	is_landing = false;
 }
