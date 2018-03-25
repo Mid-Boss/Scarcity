@@ -3,6 +3,7 @@
 
 h_spd = 4;
 run_spd = 12;
+accel_spd = 16;
 x_disp = 0;
 jmp_spd = 10;
 h_wall_spd = 2;
@@ -22,3 +23,9 @@ is_jmp = false;
 check_on = true;
 is_running = false;
 run_time = 20;
+accel_time = 2;
+
+run_energy = 10;
+jmp_energy = 5;
+wall_jmp_energy = 5;
+bullet_energy = 10;
