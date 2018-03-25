@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "1d05a1b8-380c-4a50-915a-c8b053c8eeca",
+            "Value": {
+                "id": "df97e1c2-e42e-4304-8b66-904b6658b538",
+                "resourcePath": "objects\\obj_checkpoint\\obj_checkpoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1d756705-d727-4a89-8e7f-1f2e7178a218",
             "Value": {
                 "id": "f6328fd6-ae49-4b2a-ac9a-ffa8da1318fa",
@@ -967,6 +975,14 @@
             }
         },
         {
+            "Key": "85bd041f-232f-4dbe-be9f-5d1f876a65ef",
+            "Value": {
+                "id": "87ea4f3e-da91-42ce-beea-a36241a08002",
+                "resourcePath": "fonts\\fnt_energy\\fnt_energy.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "85ea41ae-c447-442b-b2b4-bba005e6ada0",
             "Value": {
                 "id": "c7d38403-7baf-4815-858b-d5a7beef1c1d",
@@ -1580,6 +1596,14 @@
                 "id": "9d58401e-7104-4236-b41f-14cd7e01d21c",
                 "resourcePath": "sounds\\snd_electrocute_placeholder\\snd_electrocute_placeholder.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "defec038-cf35-4e2d-8de3-6e01fccedbd0",
+            "Value": {
+                "id": "1e92be7c-75cc-46bc-960d-8ae864dc252f",
+                "resourcePath": "objects\\obj_energy_meter\\obj_energy_meter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
