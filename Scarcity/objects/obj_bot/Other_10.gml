@@ -6,7 +6,7 @@ key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(vk_space);
 
 //Left and right inputs
-if !is_wall_jmp
+if !is_wall_jmping
 	move = key_left + key_right;
 if move != 0
 	is_walk = true;
@@ -18,7 +18,7 @@ if (vsp < 10)
 	vsp += grav;
 
 //Wall Jump Mechanics
-if is_wall_jmp
+if is_wall_jmping
 {
 	if hsp > 0
 		hsp = -h_wall_spd;
@@ -30,7 +30,7 @@ if is_wall_jmp
 //If on the ground, allow jumping
 if (place_meeting(x, y + 1, obj_solid))
 {
-	if leg_energy > 0
+	if energy_reserve > 0
 	{
 		vsp = key_jump * -jmp_spd
 		if vsp < 0
@@ -46,13 +46,12 @@ if (place_meeting(x+hsp, y, obj_solid))
 		x += sign(hsp);
 	}
 	//Wall Jump
-	if key_jump && !place_meeting(x, y + 1, obj_solid) && arm_energy > 0 && leg_energy > 0
+	if key_jump && !place_meeting(x, y + 1, obj_solid) && energy_reserve > 0
 	{
+		is_wall_jmping = true;
 		is_wall_jmp = true;
 		image_xscale = -image_xscale;
 		alarm[0] = wall_jmp_timer;
-		arm_energy -= 5;
-		leg_energy -= 5;
 	}
 	else
 		hsp = 0;
@@ -136,13 +135,9 @@ y += vsp;
 //Store previous vertical speed
 prev_vsp = vsp;
 
-if is_jmp
+if is_jmp || is_wall_jmp
 {
-	leg_energy -= 5;
+	energy_reserve -= 5;
 	is_jmp = false;
-}
-if is_walk
-{
-	//leg_energy -= 0.5;
-	is_walk = false;
+	is_wall_jmp = false;
 }

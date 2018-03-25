@@ -9,7 +9,7 @@ if o_checkpoint != noone
 	{
 		check_on = false;
 		energy_reserve = 100;
-		leg_energy = get_integer("Input Leg Energy...Current Energy Reserve: " + string(energy_reserve), 0);
+		/*leg_energy = get_integer("Input Leg Energy...Current Energy Reserve: " + string(energy_reserve), 0);
 		if leg_energy > energy_reserve
 			leg_energy = get_integer("***ERROR! ENERGY RESERVE DOES NOT COVER AMOUNT ENTERED*** Input Leg Energy...Current Energy Reserve: " + string(energy_reserve), 0);
 		energy_reserve -= leg_energy;
@@ -20,7 +20,7 @@ if o_checkpoint != noone
 		body_energy = get_integer("Input Body Energy...Current Energy Reserve: " + string(energy_reserve), 0);
 		if body_energy > energy_reserve
 			body_energy = get_integer("***ERROR! ENERGY RESERVE DOES NOT COVER AMOUNT ENTERED*** Input Body Energy...Current Energy Reserve: " + string(energy_reserve), 0);
-		energy_reserve -= body_energy;
+		energy_reserve -= body_energy;*/
 	}
 }
 else
