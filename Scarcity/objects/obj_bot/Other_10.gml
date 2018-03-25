@@ -1,18 +1,32 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-key_left = -keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
+key_left = -keyboard_check(vk_left);
+key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_space);
+key_run = keyboard_check_pressed(ord("A"));
+key_shoot = keyboard_check_pressed(ord("D"));
+key_charge = keyboard_check_pressed(vk_lshift);
+key_change_up = keyboard_check_pressed(vk_up);
+key_change_down = keyboard_check_pressed(vk_down);
 
 //Left and right inputs
 if !is_wall_jmping
 	move = key_left + key_right;
 if move != 0
 	is_walk = true;
+//Set Charging
+if key_run
+{
+	is_running = true;
+	alarm[1] = run_time;
+}
 //Horizontal Movespeed
-//if leg_energy > 0
+if !is_running
 	hsp = move * h_spd;
+else
+	hsp = move * run_spd;
+
 //Apply Gravity
 if (vsp < 10)
 	vsp += grav;
@@ -86,46 +100,6 @@ if (place_meeting(x, y, obj_solid))
 	{
 		y += 1;
 	}
-}
-
-//Sprite management
-if prev_vsp > 0 and vsp == 0
-{
-	is_landing = true;
-}
-
-if hsp > 0 and vsp == 0
-{
-	image_xscale = 1;
-	sprite_index = spr_bot_runner_walk;
-}
-else if hsp < 0 and vsp == 0
-{
-	image_xscale = -1;
-	sprite_index = spr_bot_runner_walk;
-}
-if vsp > 0
-{
-	sprite_index = spr_bot_runner_fall;
-}
-else if vsp < 0
-{
-	sprite_index = spr_bot_runner_jump_up;
-}
-
-if is_landing
-{
-	sprite_index = spr_bot_runner_land;
-}
-
-if (sprite_index == spr_bot_runner_land and image_index == 5) or vsp < 0
-{
-	is_landing = false;
-}
-
-if vsp == 0 and hsp == 0 && !is_landing
-{
-	sprite_index = spr_bot_runner_idle;
 }
 
 //Add horizontal and vertical speed to position

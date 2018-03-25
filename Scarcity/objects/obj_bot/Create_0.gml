@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 h_spd = 4;
+run_spd = 12;
 x_disp = 0;
 jmp_spd = 10;
 h_wall_spd = 2;
@@ -16,5 +17,7 @@ is_wall_jmping = false;
 wall_jmp_timer = 20;
 energy_reserve = 0;
 is_walk = false;
-is_jmp = false
+is_jmp = false;
 check_on = true;
+is_running = false;
+run_time = 20;
