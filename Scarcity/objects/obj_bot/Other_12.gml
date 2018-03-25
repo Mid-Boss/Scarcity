@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Sprite management
 // You can write your code in this editor
 
 //Sprite management

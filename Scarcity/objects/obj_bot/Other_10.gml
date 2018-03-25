@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description All movement and Collisions
 // You can write your code in this editor
 
 key_left = -keyboard_check(vk_left);
@@ -59,6 +59,12 @@ if (place_meeting(x+hsp, y, obj_solid))
 	{
 		x += sign(hsp);
 	}
+	
+	if !place_meeting(x, y + 1, obj_solid) && vsp > 0
+	{
+		vsp -= v_slide
+	}
+	
 	//Wall Jump
 	if key_jump && !place_meeting(x, y + 1, obj_solid) && energy_reserve > 0
 	{

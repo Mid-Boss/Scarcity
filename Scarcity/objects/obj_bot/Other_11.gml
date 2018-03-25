@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Energy Stuff
 // You can write your code in this editor
 
 o_checkpoint = instance_place(x, y, obj_checkpoint);
