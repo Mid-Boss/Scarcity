@@ -28,6 +28,8 @@ can_input = true;
 text_time = 200;
 run_charge = 0;
 is_trans = true;
+draw_low = false;
+draw_empty = false;
 
 run_energy = [10,15];
 jmp_energy = [10,15];

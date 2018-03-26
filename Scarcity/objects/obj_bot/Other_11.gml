@@ -22,3 +22,7 @@ if energy_reserve <= 0  && is_trans{
 }
 else if energy_reserve > 0
 	is_trans = true;
+	
+if energy_reserve <= 0 and alarm[4] <= 0 {
+	alarm[4] = 60;
+}

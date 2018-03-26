@@ -1,0 +1,1 @@
+text_ = "You probably have enough power left.";

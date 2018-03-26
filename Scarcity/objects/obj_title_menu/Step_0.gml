@@ -10,7 +10,7 @@ if keyboard_check_pressed(vk_down) || keyboard_check_pressed(vk_up)
 	audio_play_sound(snd_robot_walk_1, 1, false);
 }
 
-if keyboard_check_pressed(vk_space)
+if keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("A"))
 {
 	if y_arrow == y_pos_1
 	{
