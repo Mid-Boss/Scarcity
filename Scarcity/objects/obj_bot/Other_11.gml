@@ -15,7 +15,10 @@ if o_checkpoint != noone
 else
 	check_on = true;
 
-if energy_reserve <= 0 {
+if energy_reserve <= 0  && is_trans{
 	audio_play_sound(snd_power_down,7,false);
-	room_restart();
+	is_trans = false;
+	//room_restart();
 }
+else if energy_reserve > 0
+	is_trans = true;

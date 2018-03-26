@@ -1,1 +1,1 @@
-text_ = "Press spacebar to jump.";
+text_ = "Press spacebar to jump";

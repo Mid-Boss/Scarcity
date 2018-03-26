@@ -394,7 +394,7 @@
             "Key": "35b9c979-07d9-49db-8fa8-347a62ce9a08",
             "Value": {
                 "id": "2ecd41bd-244a-4b76-9a5f-b8247a872f8d",
-                "resourcePath": "fonts\\fnt_title\\fnt_title.yy",
+                "resourcePath": "fonts\\fnt_title_menu\\fnt_title_menu.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -1676,6 +1676,14 @@
                 "id": "f8e2ce96-c4f5-43eb-aef9-f4c50feaeb33",
                 "resourcePath": "sounds\\snd_speak_delta_time\\snd_speak_delta_time.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d42cb7e2-099c-448f-a5ca-22aa743d4665",
+            "Value": {
+                "id": "76e9110b-8550-4657-96da-c4bfcc0ef215",
+                "resourcePath": "fonts\\fnt_title\\fnt_title.yy",
+                "resourceType": "GMFont"
             }
         },
         {

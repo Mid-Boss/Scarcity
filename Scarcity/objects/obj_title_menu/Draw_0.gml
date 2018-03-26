@@ -4,6 +4,10 @@
 draw_set_color(c_white);
 draw_set_font(fnt_title);
 
+draw_text(240, 100, "LITHIUM LEAK");
+
+draw_set_font(fnt_title_menu);
+
 draw_text(420, y_pos_1, "START");
 draw_text(420, y_pos_2, "QUIT");
 

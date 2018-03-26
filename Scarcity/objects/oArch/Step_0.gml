@@ -18,9 +18,8 @@ if (obj_bot.x - _x <= 0.5) and (obj_bot.x - _x >= -0.5) and (obj_bot.y - _y <= 0
 if obj_bot.sprite_index == spr_bot_runner_elec and (animation_hit_frame(image_number-1)) {
 	if target_ == rm_title
 	{
-		global.game_victory = true;
-		instance_deactivate_all(true);
-		audio_stop_sound(snd_music_techno);
+		game_restart();
 	}
-	room_goto(target_);	
+	else
+		room_goto(target_);	
 }
