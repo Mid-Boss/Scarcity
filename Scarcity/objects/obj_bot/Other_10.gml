@@ -8,6 +8,7 @@ key_run = keyboard_check_pressed(ord("A"));
 key_shoot = keyboard_check_pressed(ord("D"));
 key_charge_jmp = keyboard_check_pressed(ord("Q"));
 key_charge_dash = keyboard_check_pressed(ord("E"));
+key_restart = keyboard_check_pressed(ord("R"));
 
 //Left and right inputs
 if !is_wall_jmping
@@ -66,20 +67,20 @@ if (place_meeting(x+hsp, y, obj_solid))
 		x += sign(hsp);
 	}
 	
-	if !place_meeting(x, y + 1, obj_solid) && vsp > 0
+	/*if !place_meeting(x, y + 1, obj_solid) && vsp > 0
 	{
 		vsp -= v_slide
-	}
+	}*/
 	
 	//Wall Jump
-	if key_jump && !place_meeting(x, y + 1, obj_solid) && energy_reserve >= wall_jmp_energy
+	/*if key_jump && !place_meeting(x, y + 1, obj_solid) && energy_reserve >= wall_jmp_energy
 	{
 		is_wall_jmping = true;
 		is_wall_jmp = true;
 		image_xscale = -image_xscale;
 		alarm[0] = wall_jmp_timer;
 	}
-	else
+	else*/
 		hsp = 0;
 }
 

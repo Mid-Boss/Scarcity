@@ -28,8 +28,8 @@ can_input = true;
 text_time = 200;
 run_charge = 0;
 
-run_energy = [5,10];
-jmp_energy = [5,10];
+run_energy = [10,15];
+jmp_energy = [10,15];
 wall_jmp_energy = 5;
 bullet_energy = 10;
 

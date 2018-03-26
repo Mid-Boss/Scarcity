@@ -39,5 +39,5 @@ audio_play_sound(snd_music_techno,1,true);
 
 
 
-room_goto(rm_labs_start);
+room_goto(rm_labs_5);
 

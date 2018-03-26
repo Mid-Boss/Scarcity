@@ -1111,6 +1111,14 @@
             }
         },
         {
+            "Key": "96c50f09-d8da-4619-87ae-9461b1faaa31",
+            "Value": {
+                "id": "d1991aed-e0ea-47f3-a65b-8eb43092d560",
+                "resourcePath": "sprites\\spr_restart\\spr_restart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "976f0855-faca-41d1-992c-f3e4df1a5f80",
             "Value": {
                 "id": "790fc148-2d56-4fdc-b112-f4c85f5e517b",
